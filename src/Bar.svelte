@@ -19,9 +19,9 @@
 
     }
     
-    var color="red";
+    var color= "red";
     black.forEach(function(item, array) {
-       if (item===ball){
+       if (item==ball){
            color="black"
        }
 })
@@ -29,7 +29,7 @@
 
     
     </script>
-   <h2>The ball n is {ball}{color}</h2>
+   <h2>The ball n is {ball} {color}</h2>
 
 
 
