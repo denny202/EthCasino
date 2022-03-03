@@ -11,27 +11,44 @@
     
     ball=0;
     
-    function handleClick() {
+    function handleClickr() {
         let random_black=black[Math.floor(Math.random()*lenb)]
         let random_red=red[Math.floor(Math.random()*lenr)]  
         var thetwos=[random_black,random_red]
         ball=thetwos[Math.floor(Math.random()*thetwos.length)]
+        for (let i=0;i< lenr;i++) {
+     let d = red [i] 
+    if (ball == d){console.log ('red')
+    return true;}
+}
+console.log(ball)
+    }
+   
+    function handleClickb() {
+        let random_black=black[Math.floor(Math.random()*lenb)]
+        let random_red=red[Math.floor(Math.random()*lenr)]  
+        var thetwos=[random_black,random_red]
+        ball=thetwos[Math.floor(Math.random()*thetwos.length)]
+        for (let i=0;i< lenr;i++) {
+     let d = red [i] 
+    if (ball == d){console.log ('black')
+    return true;}
+}
+console.log(ball)
+
 
     }
+
+
+
     
-    var color= "red";
-    black.forEach(function(item, array) {
-       if (item==ball){
-           color="black"
-       }
-})
-    console.log(ball)
 
     
     </script>
-   <h2>The ball n is {ball} {color}</h2>
+   <h2>The ball n is {ball} </h2>
 
 
 
-   <button type="button" class="btn btn-outline-warning" on:click={handleClick}>RED</button>
-   <button type="button" class="btn btn-outline-danger">Danger</button>
+   <button type="button" class="btn btn-outline-warning" on:click={handleClickr}>RED</button>
+   
+   <button type="button" class="btn btn-outline-warning" on:click={handleClickb}>BLACK</button>
